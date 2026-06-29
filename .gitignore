@@ -1,0 +1,5 @@
+*.pdf
+*.docx
+/env
+__pycache__/
+Project_Report_MUA600.md

@@ -1,0 +1,20 @@
+{
+  "stations": {
+    "Source1":  { "x": 55,  "y": 82, "capabilities": ["source"],                          "part_type": 1 },
+    "Source2":  { "x": 158, "y": 82, "capabilities": ["source"],                          "part_type": 2 },
+    "Process1": { "x": 450, "y": 82, "capabilities": ["process_op1", "process_op2"],      "processing_time": 3.0 },
+    "Process2": { "x": 650, "y": 82, "capabilities": ["process_op2", "process_op1"],      "processing_time": 3.0 },
+    "Sink":     { "x": 945, "y": 82, "capabilities": ["sink"] }
+  },
+  "process_plans": {
+    "1": [
+      { "station": "Process1", "action": "process", "capability": "process_op1" },
+      { "station": "Sink",     "action": "sink" }
+    ],
+    "2": [
+      { "station": "Process2", "action": "process", "capability": "process_op2" },
+      { "station": "Process1", "action": "process", "capability": "process_op1" },
+      { "station": "Sink",     "action": "sink" }
+    ]
+  }
+}

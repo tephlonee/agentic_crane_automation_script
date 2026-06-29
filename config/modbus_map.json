@@ -1,0 +1,29 @@
+{
+  "_ref": "The Crane Simulation and Modbus Interface — MUA600 (all signals are holding registers)",
+  "host": "127.0.0.1",
+  "port": 502,
+  "crane": {
+    "set_x":             1,
+    "set_y":             2,
+    "vacuum":            3,
+    "pos_x":            15,
+    "pos_y":            16,
+    "travel_y":        150,
+    "pick_y":           82,
+    "position_tolerance": 2,
+    "gripper_delay":   0.3,
+    "move_timeout": 86400.0
+  },
+  "stations": {
+    "Source1":  { "sensor": 17 },
+    "Source2":  { "sensor": 18 },
+    "Process1": { "run": 4,  "is_running": 19, "sensor": 21 },
+    "Process2": { "run": 5,  "is_running": 20, "sensor": 22 },
+    "Sink":     {}
+  },
+  "system": {
+    "reset":   0,
+    "button1": 23,
+    "button2": 24
+  }
+}
