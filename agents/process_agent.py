@@ -92,7 +92,7 @@ class ProcessAgent(BaseAgent):
 
         # 2. Start the process
         self._mb.write_holding_register(run_reg, 1)
-        self.logger.info("Run the process" , run_reg , 1)
+        self.logger.info("Run the process"  , 1)
 
         # 3. Wait for isRunning = 1 (process has started)
         deadline = time.time() + _START_TIMEOUT
